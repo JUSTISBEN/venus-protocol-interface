@@ -141,7 +141,7 @@ const abortController = new AbortController();
 const format = commaNumber.bindWith(',', '.');
 
 function Overview({ settings, getMarketHistory }) {
-  const [currentAsset, setCurrentAsset] = useState('sxp');
+  const [currentAsset, setCurrentAsset] = useState('xvs');
   const [data, setData] = useState([]);
   const [marketInfo, setMarketInfo] = useState({});
   const [currentAPY, setCurrentAPY] = useState(0);
@@ -224,7 +224,7 @@ function Overview({ settings, getMarketHistory }) {
               id="asset"
             >
               <Select
-                defaultValue="sxp"
+                defaultValue="xvs"
                 style={{ width: 150, marginRight: 10 }}
                 getPopupContainer={() => document.getElementById('asset')}
                 dropdownMenuStyle={{
