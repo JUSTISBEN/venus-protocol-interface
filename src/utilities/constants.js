@@ -1,4 +1,3 @@
-import sxp from 'assets/img/coins/sxp.png';
 import usdc from 'assets/img/coins/usdc.png';
 import usdt from 'assets/img/coins/usdt.png';
 import busd from 'assets/img/coins/busd.png';
@@ -20,8 +19,8 @@ import matic from 'assets/img/coins/matic.png';
 import cake from 'assets/img/coins/cake.png';
 import aave from 'assets/img/coins/aave.png';
 import tusd from 'assets/img/coins/tusd.png';
+import sxp from 'assets/img/coins/sxp.png';
 
-import vsxp from 'assets/img/coins/vsxp.png';
 import vusdc from 'assets/img/coins/vusdc.png';
 import vusdt from 'assets/img/coins/vusdt.png';
 import vbusd from 'assets/img/coins/vbusd.png';
@@ -43,6 +42,7 @@ import vmatic from 'assets/img/coins/vmatic.png';
 import vcake from 'assets/img/coins/vcake.png';
 import vaave from 'assets/img/coins/vaave.png';
 import vtusd from 'assets/img/coins/vtusd.png';
+import vsxp from 'assets/img/coins/vsxp.png';
 
 import contracts from './contracts';
 
@@ -55,14 +55,6 @@ export const CONTRACT_XVS_TOKEN_ADDRESS =
 export const CONTRACT_TOKEN_ADDRESS =
   process.env.REACT_APP_CHAIN_ID === '97'
     ? {
-        sxp: {
-          id: 'sxp',
-          symbol: 'SXP',
-          decimals: 18,
-          address: contracts.TEST.TOKEN.sxp,
-          asset: sxp,
-          vasset: vsxp
-        },
         usdc: {
           id: 'usdc',
           symbol: 'USDC',
@@ -181,17 +173,17 @@ export const CONTRACT_TOKEN_ADDRESS =
           address: contracts.TEST.TOKEN.tusd,
           asset: tusd,
           vasset: vtusd
-        }
-      }
-    : {
+        },
         sxp: {
           id: 'sxp',
           symbol: 'SXP',
           decimals: 18,
-          address: contracts.MAIN.TOKEN.sxp,
+          address: contracts.TEST.TOKEN.sxp,
           asset: sxp,
           vasset: vsxp
-        },
+        }
+      }
+    : {
         usdc: {
           id: 'usdc',
           symbol: 'USDC',
@@ -358,17 +350,20 @@ export const CONTRACT_TOKEN_ADDRESS =
           address: contracts.MAIN.TOKEN.tusd,
           asset: tusd,
           vasset: vtusd
+        },
+        sxp: {
+          id: 'sxp',
+          symbol: 'SXP',
+          decimals: 18,
+          address: contracts.MAIN.TOKEN.sxp,
+          asset: sxp,
+          vasset: vsxp
         }
       };
 
 export const CONTRACT_VBEP_ADDRESS =
   process.env.REACT_APP_CHAIN_ID === '97'
     ? {
-        sxp: {
-          id: 'sxp',
-          symbol: 'vSXP',
-          address: contracts.TEST.VBEP.sxp
-        },
         usdc: {
           id: 'usdc',
           symbol: 'vUSDC',
@@ -443,14 +438,14 @@ export const CONTRACT_VBEP_ADDRESS =
           id: 'tusd',
           symbol: 'vTUSD',
           address: contracts.TEST.VBEP.tusd
-        }
-      }
-    : {
+        },
         sxp: {
           id: 'sxp',
           symbol: 'vSXP',
-          address: contracts.MAIN.VBEP.sxp
-        },
+          address: contracts.TEST.VBEP.sxp
+        }
+      }
+    : {
         usdc: {
           id: 'usdc',
           symbol: 'vUSDC',
@@ -555,5 +550,10 @@ export const CONTRACT_VBEP_ADDRESS =
           id: 'tusd',
           symbol: 'vTUSD',
           address: contracts.MAIN.VBEP.tusd
+        },
+      sxp: {
+          id: 'sxp',
+          symbol: 'vSXP',
+          address: contracts.MAIN.VBEP.sxp
         }
       };
