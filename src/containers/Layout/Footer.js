@@ -5,7 +5,7 @@ import { BASE_BSC_SCAN_URL } from '../../config';
 import { useBlock } from '../../hooks/useBlock';
 
 const FooterWrapper = styled.div`
-  height: 50px;
+  height: 100px;
   padding: 26px 0px;
   background-color: var(--color-bg-main);
   display: flex;
@@ -54,12 +54,23 @@ function Footer() {
       <a href="https://t.me/VenusProtocol" target="_blank" rel="noreferrer">
         Support
       </a>
-      <a
-        href="https://venus.io/Whitepaper.pdf"
-        target="_blank"
-        rel="noreferrer"
-      >
+      <a href="https://venus.io/Whitepaper.pdf" target="_blank" rel="noreferrer">
         Whitepaper
+      </a>
+      <a href="https://github.com/VenusProtocol" target="_blank" rel="noreferrer">
+        Github
+      </a>
+      <a href="https://twitter.com/VenusProtocol" target="_blank" rel="noreferrer">
+        Twitter
+      </a>
+      <a href="https://medium.com/VenusProtocol" target="_blank" rel="noreferrer">
+        Medium
+      </a>
+      <a href="https://community.venus.io/" target="_blank" rel="noreferrer">
+        BBS
+      </a>
+      <a href="https://venus.io/" target="_blank" rel="noreferrer">
+        Site
       </a>
     </FooterWrapper>
   );
